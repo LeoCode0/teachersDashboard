@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <h2 class="header__title"></h2>
+            <h2 class="header__title">Dashboard</h2>
             <input type="text" class="header__search" placeholder="Search">
         </div>
         <div class="header__container">
@@ -26,6 +26,40 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="teachers">
+            <div class="teachers__header">
+                <h2 class="teachers__title">Encuentra a tu profesor</h2>
+                <div class="teachers__container">
+
+                    <button class="teachers__button" type="button">
+                        +
+                    </button>
+                    <select name="teachers" id="teachers" class="teachers__select" value="english">
+                        <option value="progrmación">Programación</option>
+                        <option value="seguridad">seguridad informatica</option>
+                        <option value="inglés">Inglés</option>
+                        <option value="crecimiento">Crecimiento profesional</option>
+                    </select>
+                </div>
+
+            </div>
+            <ul class="teachers__list">
+                <li>
+                    <my-teacher img="https://picsum.photos/300" name="Diego de granda" courses="10 cursos"
+                        students="1500 estudiantes"></my-teacher>
+                </li>
+                <li>
+                    <my-teacher img="https://picsum.photos/320" name="Estefany ipsim" courses="15 cursos"
+                        students="2500 estudiantes"></my-teacher>
+                </li>
+                <li>
+                    <my-teacher img="https://picsum.photos/340" name="jon Alvarezz" courses="20 cursos"
+                        students="3500 estudiantes"></my-teacher>
+                </li>
+            </ul>
+        </section>
+    </main>
     <script type="module" src="./src/app.js"></script>
 </body>
 
