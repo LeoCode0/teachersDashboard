@@ -210,9 +210,13 @@ button:hover{
 }
 
 .courses__list{
-    max-height: 390px;
+    max-height: 420px;
     list-style: none;
     overflow-y: scroll;
+}
+
+.courses__progress{
+    margin-top: 80px;
 }
 
 .courses__num{
