@@ -1,5 +1,5 @@
 :root{
-    --background-color: rgba(0, 0, 0, 0.2);
+    --background-color: #f2f5fa;
 
 }
 
@@ -16,6 +16,11 @@ html{
 body{
     font-family: sans-serif;
     font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+.nav{
+    display: none;
 }
 
 .header{
@@ -34,10 +39,9 @@ body{
 }
 
 .header__search{
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--background-color);
   border: 0;
   border-radius: 20px;
-  color: white;
   padding: 10px;
   width: 90%;
   max-width: 360px;
@@ -64,6 +68,11 @@ body{
     border-radius: 50%;
     object-fit: cover;
     margin: 0 20px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 100vw;
 }
 
 .teachers__list{
@@ -108,4 +117,256 @@ body{
 }
 
 
+.teacherInfo__title{
+    margin: 20px 0;
+    text-align: center;
+}
 
+.teacherInfo__courses{
+    margin: 20px 0;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+
+.courses{
+    background: var(--background-color);
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;;
+}
+
+.courses__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.courses__button{
+    border: 0;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.courses__list{
+    max-height: 390px;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.courses__num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.courses__bar{
+    opacity: 0.4;
+    font-weight: 700;
+}
+
+
+.bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.125);
+    margin: 10px 0;
+}
+
+.bar__progress{
+    border-radius: inherit;
+    height: 100%;
+    width: 45%;
+    background-color: #000;
+}
+
+@media screen and (min-width: 768px){
+    .header{
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .header__container{
+        width: 49%;
+        margin: 0;
+    }
+
+    .header__title{
+        margin: 0 10px 0 0;
+    }
+
+    .header__search{
+        width: 40%;
+    }
+
+    .teachers__header{
+        justify-items: right;
+        padding: 0 40px;
+    }
+
+    .teachers__list{
+        flex-wrap: wrap;
+        overflow: hidden;
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .teachers__list li{
+        width: 100%;
+    }
+
+    .teacherInfo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .teacherInfo__courses{
+        margin: 0 0 0 40px;
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.125);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContainer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF;
+    height: 50%;
+    max-height: 400px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 25px;
+    border: 1px solid var(--background-color);
+    align-items: center;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.modalContainer form{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.modalContainer label{
+    display: block;
+    width: 100%;
+}
+
+.modalContainer input{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border: 1px solid var(--background-color);
+    background-color: var(--background-color);
+}
+
+.modalContainer button{
+    width: 130px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+button.modal__close{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 46px;
+    width: 46px;
+    font-size: 2rem;
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+    .header__container.user{
+        justify-content: flex-end;
+        padding-right: 40px;
+    }
+
+    .main{
+        grid-template-columns: 70% 30%;
+    }
+
+    .teachers{
+        grid-column: 1/2;
+    }
+
+    .teacherInfo__col{
+        grid-column: 1/2;
+    }
+
+    .teacherInfo{
+        justify-content: space-evenly;
+    }
+
+    .teacherInfo__courses{
+        width: 50%;
+    }
+
+    .courses{
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+}
+
+@media screen and (min-width: 1240px){
+    .dashboard{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 10vh 93vh;
+        background-color: var(--background-color);
+    }
+
+    .nav{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background: var(--background-color);
+    }
+
+    .header{
+        grid-column: 2/3;
+        background-color: #fff;
+        height: 100%;
+        margin-top: 0;
+        border-top-left-radius: 30px;
+    }
+
+    .main{
+        grid-column: 2/3;
+        background-color: #FFF;
+        border-bottom-left-radius: 30px;
+    }
+}

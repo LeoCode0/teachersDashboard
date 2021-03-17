@@ -27,7 +27,7 @@ class SingleTeacher extends HTMLElement {
           }" class="image"/>
           <p class="name">${this.name}</p>
           <p class="experience">${this.experience}</p>
-          <a href="https://twitter.com/LeoCode0" class="singleTeacher__twitter">Twitter</a>
+          <a href="https://twitter.com/LeoCode0" class="singleTeacher__twitter" target="__blank" rel="noopener noreferrer" >Twitter</a>
         </div>
         ${this.getStyles()}
       `;
@@ -72,6 +72,13 @@ class SingleTeacher extends HTMLElement {
           text-align: center;
           margin: 0 0 20px 0;
           max-width: 180px;
+        }
+
+        @media screen and (min-width: 768px){
+          .singleTeacher{
+            margin: 0;
+            width: 330px;
+          }
         }
 
       </style>

@@ -73,7 +73,7 @@ class Teacher extends HTMLElement {
     return `
         <style>
           :host{
-            --background-color: rgba(0, 0, 0, 0.2);
+            --background-color: #f2f5fa;
           }
           
           .teacher{
@@ -118,7 +118,7 @@ class Teacher extends HTMLElement {
 
           .teacher__courses{
             display: flex;
-            width: 2000px;
+            width: 300px;
             justify-content: space-around;
             font-size: 1.7rem;
             color: rgba(0, 0, 0, 0.5);
@@ -130,6 +130,18 @@ class Teacher extends HTMLElement {
 
           .edit{
             display: none;
+          }
+
+          @media screen and (min-width: 768px){
+            .teacher{
+              width: 85%;
+              justify-content: flex-start;
+              margin: 0 auto;
+            }
+
+            .teacher__details{
+              width: 260px;
+            }
           }
 
         </style>

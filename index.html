@@ -11,57 +11,137 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__container">
-            <h2 class="header__title">Dashboard</h2>
-            <input type="text" class="header__search" placeholder="Search">
-        </div>
-        <div class="header__container">
-            <div class="header__notification">
-                <i>Icon</i>
+    <div class="dashboard">
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__container">
+                <h2 class="header__title">Dashboard</h2>
+                <input required type="text" class="header__search" placeholder="Search">
             </div>
-            <div class="header__user">
-                <img src="https://picsum.photos/200" alt="User" class="user__img">
-                <p class="user__name">Lorem ipsum</p>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="teachers">
-            <div class="teachers__header">
-                <h2 class="teachers__title">Encuentra a tu profesor</h2>
-                <div class="teachers__container">
-                    <button class="teachers__button" type="button">
-                        +
-                    </button>
-                    <select name="teachers" id="teachers" class="teachers__select" value="english">
-                        <option value="progrmación">Programación</option>
-                        <option value="seguridad">seguridad informatica</option>
-                        <option value="inglés">Inglés</option>
-                        <option value="crecimiento">Crecimiento profesional</option>
-                    </select>
+            <div class="header__container user">
+                <div class="header__notification">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="header__user">
+                    <img src="https://picsum.photos/200" alt="User" class="user__img">
+                    <p class="user__name">LeoCode0</p>
                 </div>
             </div>
-            <ul class="teachers__list">
-                <li>
-                    <my-teacher img="https://picsum.photos/300" name="Diego de granda" courses="10 cursos"
-                        students="1500 estudiantes"></my-teacher>
-                </li>
-                <li>
-                    <my-teacher img="https://picsum.photos/320" name="Estefany ipsim" courses="15 cursos"
-                        students="2500 estudiantes"></my-teacher>
-                </li>
-                <li>
-                    <my-teacher img="https://picsum.photos/340" name="jon Alvarezz" courses="20 cursos"
-                        students="3500 estudiantes"></my-teacher>
-                </li>
-            </ul>
-        </section>
-        <section class="teacherInfo">
-            <single-teacher name="Diego de granda" experience="Google developer expert"></single-teacher>
-        </section>
+        </header>
+        <main class="main">
+            <section class="teachers">
+                <div class="teachers__header">
+                    <h2 class="teachers__title">Encuentra a tu profesor</h2>
+                    <div class="teachers__container">
+                        <button class="teachers__button" type="button">
+                            +
+                        </button>
+                        <select name="teachers" id="teachers" class="teachers__select" value="english">
+                            <option value="progrmación">Programación</option>
+                            <option value="seguridad">seguridad informatica</option>
+                            <option value="inglés">Inglés</option>
+                            <option value="crecimiento">Crecimiento profesional</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="teachers__list">
+                    <li>
+                        <my-teacher img="https://picsum.photos/300" name="Diego de granda" courses="10 cursos"
+                            students="1500 estudiantes"></my-teacher>
+                    </li>
+
+                    <li>
+                        <my-teacher img="https://picsum.photos/320" name="Estefany ipsim" courses="15 cursos"
+                            students="2500 estudiantes"></my-teacher>
+                    </li>
+                    <li>
+                        <my-teacher img="https://picsum.photos/340" name="jon Alvarezz" courses="20 cursos"
+                            students="3500 estudiantes"></my-teacher>
+                    </li>
+                </ul>
+            </section>
+            <section class="teacherInfo__col">
+                <h2 class="teacherInfo__title">
+                    Información del profesor
+                </h2>
+                <div class="teacherInfo">
+
+                    <single-teacher name="Diego de granda" experience="Google developer expert"></single-teacher>
+                    <ul class="teacherInfo__courses">
+                        <li>
+                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            </course-teacher>
+                        </li>
+                        <li>
+                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            </course-teacher>
+                        </li>
+                        <li>
+                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            </course-teacher>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </section>
+            <section class="courses">
+                <h2 class="courses__title">
+                    Mis cursos <button class="courses__button" type="button">Add course</button>
+                </h2>
+                <div class="courses__list">
+                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                </div>
+                <div class="courses__progress">
+                    <h3 class="courses__title">
+                        Mi progreso
+                    </h3>
+                    <p class="courses__num">
+                        45%
+                    </p>
+                    <div class="courses__bar">
+                        <p>Progreso</p>
+                        <div class="bar">
+                            <div class="bar__progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div>
+
     </main>
+    <div class="modal">
+        <div class="modalContainer">
+            <form class="modal__form">
+                <label for="course">Nombre del curso</label>
+                <input required type="text" name="course" id="course">
+                <label for="classes">Numero de clases</label>
+                <input required type="number" name="classes" id="classes" min="0" max="50">
+                <label for="image">URL de la imagen</label>
+                <input required type="text" name="image" id="image">
+                <button class="modal__button" type="submit">Agregar curso</button>
+            </form>
+            <button class="modal__close"><i class="far fa-window-close"></i></button>
+        </div>
+
+    </div>
     <script type="module" src="./src/app.js"></script>
+    <script src="https://kit.fontawesome.com/1db2702c51.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
