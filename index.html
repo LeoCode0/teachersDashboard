@@ -15,14 +15,15 @@
 
         <nav class="nav">
             <ul class="nav__list">
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
+                <li><i class="fas fa-home"></i> <span>Home</span> </li>
+                <li><i class="fas fa-user"></i> <span>Perfil</span> </li>
+                <li><i class="fas fa-comments"></i> <span>Chat</span> </li>
+                <li><i class="fas fa-book"></i> <span>Blog</span> </li>
+                <li><i class="fas fa-bullhorn"></i> <span>Foro</span> </li>
+                <li><i class="fas fa-tv"></i> <span>Live</span> </li>
             </ul>
+            <button class="nav__close"><i class="far fa-window-close"></i></button>
+
         </nav>
         <header class="header">
             <div class="header__container">
@@ -36,6 +37,10 @@
                 <div class="header__user">
                     <img src="https://picsum.photos/200" alt="User" class="user__img">
                     <p class="user__name">LeoCode0</p>
+                    <span class="header__nav">
+
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </div>
             </div>
         </header>
@@ -57,17 +62,21 @@
                 </div>
                 <ul class="teachers__list">
                     <li>
-                        <my-teacher img="https://picsum.photos/300" name="Diego de granda" courses="10 cursos"
-                            students="1500 estudiantes"></my-teacher>
+                        <my-teacher img="https://static.platzi.com/media/teachers/diego-de-granda.jpg"
+                            name="Diego De Granda" courses="12 Cursos" students="19868 Estudiantes"></my-teacher>
                     </li>
 
                     <li>
-                        <my-teacher img="https://picsum.photos/320" name="Estefany ipsim" courses="15 cursos"
-                            students="2500 estudiantes"></my-teacher>
+                        <my-teacher img="https://static.platzi.com/media/teachers/estefany-aguilar.jpg"
+                            name="Estefany Aguilar" courses="3 cursos" students="6408 estudiantes"></my-teacher>
                     </li>
                     <li>
-                        <my-teacher img="https://picsum.photos/340" name="jon Alvarezz" courses="20 cursos"
-                            students="3500 estudiantes"></my-teacher>
+                        <my-teacher img="https://pbs.twimg.com/profile_images/1243234951266525186/nJT7hsWp_400x400.jpg"
+                            name="Jonathan Alvarez" courses="3 cursos" students="658 estudiantes"></my-teacher>
+                    </li>
+                    <li>
+                        <my-teacher img="https://static.platzi.com/media/teachers/teachers/197-ricardo-celis"
+                            name="Ricardo Celis" courses="18 cursos" students="13723 estudiantes"></my-teacher>
                     </li>
                 </ul>
             </section>
@@ -77,18 +86,27 @@
                 </h2>
                 <div class="teacherInfo">
 
-                    <single-teacher name="Diego de granda" experience="Google developer expert"></single-teacher>
+                    <single-teacher img="https://pbs.twimg.com/profile_images/1243234951266525186/nJT7hsWp_400x400.jpg"
+                        name="Jonathan Alvarez" experience="Senior Web Software Engineer en InterNations"
+                        twitter="https://twitter.com/jonalvarezz">
+                    </single-teacher>
                     <ul class="teacherInfo__courses">
                         <li>
-                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            <course-teacher
+                                logo="https://static.platzi.com/media/achievements/badge-nextjs-2259fc68-f86b-486e-bc09-95311a887985.png"
+                                level="Básico" name="Curso de Next.js">
                             </course-teacher>
                         </li>
                         <li>
-                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            <course-teacher
+                                logo="https://static.platzi.com/media/achievements/badge-optimizacion-web-183eef1c-d7e3-4f43-b680-f12f428c6484.png"
+                                level="Avanzado" name="Curso de Optimización Web">
                             </course-teacher>
                         </li>
                         <li>
-                            <course-teacher logo="https://picsum.photos/330" level="basic" name="Curso de React JS">
+                            <course-teacher
+                                logo="https://static.platzi.com/media/achievements/badge-manipulacion-dom-js-68f056c0-11d4-4533-8c75-693db60d85f8.png"
+                                level="Básico" name="Curso de Manipulación del DOM">
                             </course-teacher>
                         </li>
 
@@ -101,11 +119,27 @@
                     Mis cursos <button class="courses__button" type="button">Add course</button>
                 </h2>
                 <div class="courses__list">
-                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
-                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
-                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
-                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
-                    <my-course name="Curso de react js" image="https://picsum.photos/300" classes="20"></my-course>
+                    <my-course name="Curso de Manipulación del DOM"
+                        image="https://static.platzi.com/media/achievements/badge-manipulacion-dom-js-68f056c0-11d4-4533-8c75-693db60d85f8.png"
+                        classes="28"></my-course>
+                    <my-course name="Curso Básico de Web Components con JavaScript"
+                        image="https://static.platzi.com/media/achievements/web-comps-vanilla-js_badge-5fe6800c-b08a-4d6d-8c08-c07dd697f94f.png"
+                        classes="22"></my-course>
+                    <my-course name="Curso de Frontend Developer"
+                        image="https://static.platzi.com/media/achievements/badge-frontend-developer-8a49e681-3e22-408d-b886-2f47dfc9953a.png"
+                        classes="43"></my-course>
+                    <my-course name="Router para Single Page App con JavaScript"
+                        image="https://static.platzi.com/media/achievements/badge-router-single-page-app-js-ac0b8cfa-7bc8-4010-a9df-7500e5c1e078.png"
+                        classes="12"></my-course>
+                    <my-course name="Curso de Diseño Web con CSS Grid y Flexbox"
+                        image="https://static.platzi.com/media/achievements/badge-diseno-cssgrid-flexbox-bc1271cc-86d0-480d-b130-b90846840af9.png"
+                        classes="28"></my-course>
+                    <my-course name="Curso de CSS Grid Layout"
+                        image="https://static.platzi.com/media/achievements/css-grid-layout_badge-c3e2a26a-dce8-42e2-86b3-aa4c01e801e4.png"
+                        classes="28"></my-course>
+                    <my-course name="Curso de Debugging con Chrome DevTools"
+                        image="https://static.platzi.com/media/achievements/badge-debugging-chrome-devtools-c75256bb-2a2f-4954-b2c0-9c946494ac37.png"
+                        classes="22"></my-course>
                 </div>
                 <div class="courses__progress">
                     <h3 class="courses__title">
@@ -125,7 +159,7 @@
     </div>
 
     </main>
-    <div class="modal">
+    <div class="modal" id="modal">
         <div class="modalContainer">
             <form class="modal__form">
                 <label for="course">Nombre del curso</label>
@@ -138,7 +172,6 @@
             </form>
             <button class="modal__close"><i class="far fa-window-close"></i></button>
         </div>
-
     </div>
     <script type="module" src="./src/app.js"></script>
     <script src="https://kit.fontawesome.com/1db2702c51.js" crossorigin="anonymous"></script>

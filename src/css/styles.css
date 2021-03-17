@@ -19,6 +19,10 @@ body{
     overflow-x: hidden;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .nav{
     display: none;
 }
@@ -68,6 +72,59 @@ body{
     border-radius: 50%;
     object-fit: cover;
     margin: 0 20px;
+}
+
+.header__notification, .header__nav{
+    font-size: 2rem;
+
+}
+
+.header__nav{
+    margin-left: 20px;
+}
+
+.nav{
+    display: flex;
+    position: fixed;
+    background: var(--background-color);
+    transform: translateX(-100vw);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+.nav__list{
+    font-size: 3rem;    
+    list-style: none;
+    width: 80%;
+}
+
+.nav__list li{
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+    transition: all .5s;
+}
+
+.nav__list li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.nav__close{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    height: 56px;
+    width: 56px;
+    font-size: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background: transparent;
+    border-radius: 25px;
 }
 
 .main{
@@ -253,7 +310,8 @@ body{
     flex-wrap: wrap;
     background-color: #FFF;
     height: 50%;
-    max-height: 400px;
+    min-height: 400px;
+    max-height: 700px;
     width: 80%;
     max-width: 600px;
     border-radius: 25px;
@@ -343,18 +401,34 @@ button.modal__close{
     .dashboard{
         display: grid;
         grid-template-columns: 10% 90%;
-        grid-template-rows: 10vh 93vh;
+        grid-template-rows: 10vh minmax(930px, 94vh);
         background-color: var(--background-color);
     }
 
     .nav{
-        display: flex;
+        position: static;
+        z-index: 0;
         height: 100%;
-        align-items: center;
+        align-items: flex-start;
         grid-column: 1/2;
         grid-row: 1/3;
         background: var(--background-color);
+        padding-top: 100px;
+        transform: translateX(1vw);
     }
+
+    .nav__list{
+        font-size: 2rem;
+    }
+
+    .nav__close{
+        display: none;
+    }
+
+    .header__nav{
+        display: none;
+    }
+
 
     .header{
         grid-column: 2/3;

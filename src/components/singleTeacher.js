@@ -5,7 +5,7 @@ class SingleTeacher extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "experience"];
+    return ["img", "name", "experience", "twitter"];
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
@@ -16,18 +16,26 @@ class SingleTeacher extends HTMLElement {
     if (attr === "experience") {
       this.experience = newVal;
     }
+
+    if (attr === "img") {
+      this.img = newVal;
+    }
+
+    if (attr === "twitter") {
+      this.twitter = newVal;
+    }
   }
 
   getTemplate() {
     const template = document.createElement("template");
     template.innerHTML = `
         <div class="singleTeacher">
-          <img src="https://picsum.photos/340" alt="${
-            this.name
-          }" class="image"/>
+          <img src=${this.img} alt="${this.name}" class="image"/>
           <p class="name">${this.name}</p>
           <p class="experience">${this.experience}</p>
-          <a href="https://twitter.com/LeoCode0" class="singleTeacher__twitter" target="__blank" rel="noopener noreferrer" >Twitter</a>
+          <a href=${
+            this.twitter
+          } class="singleTeacher__twitter" target="__blank" rel="noopener noreferrer" >Twitter</a>
         </div>
         ${this.getStyles()}
       `;
