@@ -293,7 +293,7 @@ button:hover{
     }
 }
 
-.modal{
+.modal, .addTeacherModal{
     position: fixed;
     top: 0;
     width: 100vw;
@@ -304,7 +304,7 @@ button:hover{
     justify-content: center;
 }
 
-.modalContainer{
+.modalContainer, .addTeacherModal__container{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -321,17 +321,21 @@ button:hover{
     justify-content: center;
 }
 
-.modalContainer form{
+.addTeacherModal__container{
+    min-height: 600px;
+}
+
+.modalContainer form, .addTeacherModal__form{
     text-align: center;
     font-size: 1.8rem;
 }
 
-.modalContainer label{
+.modalContainer label, .addTeacherModal__form label{
     display: block;
     width: 100%;
 }
 
-.modalContainer input{
+.modalContainer input, .addTeacherModal__form input{
     display: block;
     width: 100%;
     max-width: 300px;
@@ -343,7 +347,7 @@ button:hover{
     background-color: var(--background-color);
 }
 
-.modalContainer button{
+.modalContainer button, .addTeacherModal__form button, .addTeacherModal__button{
     width: 130px;
     height: 40px;
     border: 1px solid black;
@@ -351,7 +355,7 @@ button:hover{
     border-radius: 20px;
 }
 
-button.modal__close{
+button.modal__close, .addTeacherModal__button{
     position: absolute;
     top: 20px;
     right: 0;

@@ -36,8 +36,8 @@ class Teacher extends HTMLElement {
             <span class="teacher__edit">..</span>
           </div>
           <div class="teacher__courses">
-            <p class="teacher__totalCourses">${this.courses}</p>
-            <p class="teacher__students">${this.students}</p>
+            <p class="teacher__totalCourses">${this.courses} Cursos</p>
+            <p class="teacher__students">${this.students} Estudiantes</p>
           </div>
           <div class="edit">
             <h2 class="title">

@@ -63,20 +63,20 @@
                 <ul class="teachers__list">
                     <li>
                         <my-teacher img="https://static.platzi.com/media/teachers/diego-de-granda.jpg"
-                            name="Diego De Granda" courses="12 Cursos" students="19868 Estudiantes"></my-teacher>
+                            name="Diego De Granda" courses="12" students="19868"></my-teacher>
                     </li>
 
                     <li>
                         <my-teacher img="https://static.platzi.com/media/teachers/estefany-aguilar.jpg"
-                            name="Estefany Aguilar" courses="3 cursos" students="6408 estudiantes"></my-teacher>
+                            name="Estefany Aguilar" courses="3" students="6408"></my-teacher>
                     </li>
                     <li>
                         <my-teacher img="https://pbs.twimg.com/profile_images/1243234951266525186/nJT7hsWp_400x400.jpg"
-                            name="Jonathan Alvarez" courses="3 cursos" students="658 estudiantes"></my-teacher>
+                            name="Jonathan Alvarez" courses="3" students="658"></my-teacher>
                     </li>
                     <li>
                         <my-teacher img="https://static.platzi.com/media/teachers/teachers/197-ricardo-celis"
-                            name="Ricardo Celis" courses="18 cursos" students="13723 estudiantes"></my-teacher>
+                            name="Ricardo Celis" courses="18" students="13723"></my-teacher>
                     </li>
                 </ul>
             </section>
@@ -116,7 +116,7 @@
             </section>
             <section class="courses">
                 <h2 class="courses__title">
-                    Mis cursos <button class="courses__button" type="button">Add course</button>
+                    Mis cursos <button class="courses__button" type="button">Agregar curso</button>
                 </h2>
                 <div class="courses__list">
                     <my-course name="Curso de Manipulación del DOM"
@@ -172,6 +172,25 @@
             </form>
             <button class="modal__close"><i class="far fa-window-close"></i></button>
         </div>
+    </div>
+
+    <div class="addTeacherModal">
+        <div class="addTeacherModal__container">
+
+            <form class="addTeacherModal__form">
+                <label for="imgTeacher">URL de la imágen del profesor </label>
+                <input type="text" name="imgTeacher" id="imgTeacher" required>
+                <label for="nameTeacher">Nombre del profesor</label>
+                <input type="text" name="nameTeacher" id="nameTeacher">
+                <label for="coursesTeacher">Número de cursos del profesor</label>
+                <input type="number" name="coursesTeacher" id="coursesTeacher">
+                <label for="studentsTeacher">Número de estudiantes del profesor</label>
+                <input type="number" name="studentsTeacher" id="students">
+                <button id="formTeacher__button" type="submit" type="submit">Agregar profesor</button>
+            </form>
+            <button class="addTeacherModal__button"><i class="far fa-window-close"></i></button>
+        </div>
+
     </div>
     <script type="module" src="./src/app.js"></script>
     <script src="https://kit.fontawesome.com/1db2702c51.js" crossorigin="anonymous"></script>
