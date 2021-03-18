@@ -2,6 +2,8 @@ class Teacher extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.experience = this.getAttribute("experience") || "Professor at Platzi";
+    this.twitter = this.getAttribute("twitter") || "https://twitter.com";
   }
 
   static get observedAttributes() {
@@ -89,6 +91,7 @@ class Teacher extends HTMLElement {
 
           .teacher:hover{
             background: var(--background-color);
+            cursor: pointer;
           }
 
           .teacher__details{
@@ -149,11 +152,32 @@ class Teacher extends HTMLElement {
   }
 
   render() {
+    const shareInfo = () => {
+      const teacherContainer = document.querySelector(".teacherInfo");
+      const singleTeacher = document.createElement("single-teacher");
+      const teacherToDelete = document.querySelector("single-teacher");
+      teacherToDelete.remove();
+      singleTeacher.setAttribute("name", this.name);
+      singleTeacher.setAttribute("img", this.img);
+      singleTeacher.setAttribute("experience", this.experience);
+      singleTeacher.setAttribute("twitter", this.twitter);
+      teacherContainer.prepend(singleTeacher);
+    };
+
     this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
+    this.shadowRoot
+      .querySelector(".teacher")
+      .addEventListener("click", shareInfo);
   }
 
   connectedCallback() {
     this.render();
+  }
+
+  disconnectedCallback() {
+    this.shadowRoot
+      .querySelector(".teacher")
+      .removeEventListener("click", shareInfo);
   }
 }
 

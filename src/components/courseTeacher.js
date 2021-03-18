@@ -2,6 +2,7 @@ class CourseTeacher extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.counter = 0;
   }
 
   static get observedAttributes() {
@@ -108,7 +109,21 @@ class CourseTeacher extends HTMLElement {
   }
 
   render() {
+    const addCourse = () => {
+      if (this.counter === 1) {
+        return;
+      }
+      const myCourses = document.querySelector(".courses__list");
+      const course = document.createElement("my-course");
+      course.setAttribute("name", this.name);
+      course.setAttribute("image", this.logo);
+      course.setAttribute("classes", 10);
+      myCourses.prepend(course);
+      this.counter = 1;
+    };
+
     this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
+    this.shadowRoot.querySelector(".add").addEventListener("click", addCourse);
   }
 
   connectedCallback() {

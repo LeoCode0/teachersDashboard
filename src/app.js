@@ -92,7 +92,7 @@ const addProfessor = () => {
   myTeacher.setAttribute("students", studentsTeacher);
 
   listElement.appendChild(myTeacher);
-  teachersList.appendChild(listElement);
+  teachersList.prepend(listElement);
 
   closeModalAddTeacher();
 };
